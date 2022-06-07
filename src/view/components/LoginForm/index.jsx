@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { getAuth } from 'lib/services'
+import { useAuth } from 'lib/contexts'
 
 export function LoginForm() {
     const [ formData, setFormData ] = useState({})
+    const { loginUser } = useAuth()
+
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -13,8 +15,7 @@ export function LoginForm() {
 
     const handleSubmit = async e => {
         e.preventDefault()
-        let res = await getAuth(formData)
-        console.log(res)
+        loginUser(formData)
     }
 
     return (

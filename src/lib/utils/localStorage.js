@@ -1,7 +1,7 @@
-export const setToken = (token) => localStorage.setItem('userToken', JSON.stringify(token))
+export const setStorageData = (key, value) => localStorage.setItem(key, JSON.stringify(value))
   
-export const removeToken = () => localStorage.removeItem('userToken')
+export const removeStorageData = key => localStorage.removeItem(key)
 
-export const getToken = () => localStorage.getItem('userToken')
+export const getStorageData = key => JSON.parse(localStorage.getItem(key))
 
   
