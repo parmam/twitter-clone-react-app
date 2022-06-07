@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { getAuth } from 'lib/services'
 
 export function LoginForm() {
     const [ formData, setFormData ] = useState({})
@@ -10,9 +11,10 @@ export function LoginForm() {
     }
 
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault()
-        console.log(formData)
+        let res = await getAuth(formData)
+        console.log(res)
     }
 
     return (
