@@ -4,7 +4,20 @@ module.exports = {
     "./src/view/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    screens:{
+      'sm': '320px',
+      'md': '480px',
+      'lg': '769px',
+      'xl': '1025px',
+    },
+    extend: {
+      colors:{
+      },
+      animation:{
+      },
+      keyframes:{
+      },
+    }
   },
   plugins: [],
 }

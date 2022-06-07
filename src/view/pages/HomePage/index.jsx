@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainLayout } from '../../layouts'
+import { MainLayout } from 'view/layouts'
 
 export function HomePage() {
     return (
