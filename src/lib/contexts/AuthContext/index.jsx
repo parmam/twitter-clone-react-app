@@ -9,21 +9,21 @@ import {
     removeStorageData,
     getStorageData
 } from 'lib/utils'
-import { onAuthStateChanged } from 'firebase/auth'
+
+import { onAuthStateChanged, signOut, signInWithEmailAndPassword} from 'firebase/auth'
 import { firebaseAuth } from 'lib/utils'
-import { getUserAuth } from 'lib/services'
+
+
 
 const AuthContext = createContext({})
 
-
-
 export const AuthProvider = ({ children }) => {
+    
     const [ user, setUser ] = useState(undefined)
     const [ token, setToken ] = useState(undefined)
     const [ isAuthenticated, setIsAuthenticated ] = useState(false)
     const [ isLoading, setIsLoading ] = useState(false)
     const [ error, setError ] = useState(null)
-
 
     const getSessionFromStorage = () => {
         setIsLoading(true)
@@ -44,13 +44,13 @@ export const AuthProvider = ({ children }) => {
     }
 
     const loginUser = async data =>  {
+        const { email, password } = data
         setIsLoading(true)
         setError(null)
-        try {
-            let res = await getUserAuth(data)
-            if (res.status === 200) {
-                setStorageData('token', res.data.idToken)
-                setStorageData('user', res.data)
+        signInWithEmailAndPassword(firebaseAuth, email, password)
+            .then((userCredential) => {
+                setStorageData('token', userCredential.user.idToken)
+                setStorageData('user', userCredential.user)
                 const token = getStorageData('token')
                 const user = getStorageData('user')
                 if(user && token){
@@ -59,18 +59,19 @@ export const AuthProvider = ({ children }) => {
                     setIsAuthenticated(true)
                     setIsLoading(false)
                 }
+            })
+            .catch((error) => {
+                setError(error)
+                setIsAuthenticated(false)
+                setIsLoading(false)
             }
-        } catch (error) {
-            setError(error)
-            setIsAuthenticated(false)
-            setIsLoading(false)
-        }
+        )
     }
 
     const logoutUser = () => {
         setIsLoading(true)
         setError(null)
-        try {
+        signOut(firebaseAuth).then(() => {
             removeStorageData('user')
             removeStorageData('token')
             let user = getStorageData('user')
@@ -79,10 +80,10 @@ export const AuthProvider = ({ children }) => {
                 setIsAuthenticated(false)
                 setIsLoading(false)
             }
-        } catch (error) {
+          }).catch((error) => {
             setError(error)
-            setIsLoading(false)            
-        }
+            setIsLoading(false)         
+          });
     }
     return (
         <AuthContext.Provider value={{user, token, isAuthenticated, isLoading, error, getSessionFromStorage, loginUser, logoutUser}}>

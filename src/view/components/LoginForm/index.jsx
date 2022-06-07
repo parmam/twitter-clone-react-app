@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useAuth } from 'lib/contexts'
+import { Button } from 'view/elements'
 
 export function LoginForm() {
     const [ formData, setFormData ] = useState({})
     const { loginUser } = useAuth()
-
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -38,12 +38,9 @@ export function LoginForm() {
                     placeholder='Password'
                     onChange={e => handleChange(e)} 
                 />
-                <button 
-                    className='w-3/5 text-center my-6 rounded-lg h-14 bg-slate-600' 
-                    type='submit'
-                >
+                <Button type='submit' variant='primary' >
                     Login
-                </button>
+                </Button>
             </form>
         </>
     )
