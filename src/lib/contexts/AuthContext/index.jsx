@@ -9,15 +9,17 @@ import {
     getToken,
 } from 'lib/utils'
 
-import { Router } from 'react-router-dom';
-import { useEffect } from 'react/cjs/react.production.min';
 
 const AuthContext = createContext({})
 
 
 export const AuthProvider = ({ children }) => {
     const [ user, setUser ] = useState(undefined)
+    
     const [ isAuthenticated, setIsAuthenticated ] = useState(false)
+
+    const [ isLoading, setIsLoading ] = useState(false)
+
 
     const token = getToken()
     if (token) {
@@ -29,7 +31,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     return (
-        <AuthContext.Provider value={{user, isAuthenticated}}>
+        <AuthContext.Provider value={{user, isAuthenticated, isLoading}}>
             {children}
         </AuthContext.Provider>
     )
