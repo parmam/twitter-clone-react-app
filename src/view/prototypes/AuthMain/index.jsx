@@ -21,7 +21,7 @@ export function AuthMain() {
                         <div className='icon-container'>
                             <SVG variant={'sign-in-google'}/>
                         </div>
-                        <span className='button-text'>Sign in with google</span>
+                        <span className='button-text'>Sign in with Google</span>
                     </div>
                 </Button>
                 <Button type='submit' variant='sign-in-apple' >
@@ -29,7 +29,7 @@ export function AuthMain() {
                         <div className='icon-container'>
                             <SVG variant={'sign-in-apple'} />
                         </div>
-                        <span className='button-text'>Sign in with google</span>
+                        <span className='button-text'>Sign in with Apple</span>
                     </div>
                 </Button>
                 <Button type='button' variant='primary' >
@@ -39,7 +39,7 @@ export function AuthMain() {
                         </span>
                     </div>
                 </Button>
-                <span>Signing up, you agree to the Terms of Service and Privacy Policy, including the Use of Cookies policy.</span>
+                <span className='terms-and-conditions-text'>Signing up, you agree to the Terms of Service and Privacy Policy, including the Use of Cookies policy.</span>
             </div>
         </>
     )

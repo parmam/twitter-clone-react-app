@@ -7,15 +7,15 @@
 }
 
 .google-content {
-    @apply flex flex-row justify-center px-2 items-center gap-3 w-full h-12
+    @apply flex flex-row justify-center px-2 items-center gap-3 w-full h-8 text-sm font-medium
 }
 
 .apple-content {
-    @apply flex flex-row justify-center px-2 items-center w-full h-12 gap-3
+    @apply flex flex-row justify-center px-2 items-center w-full h-8 gap-3 text-sm font-semibold
 }
 
 .phone-content {
-    @apply flex flex-row justify-center px-2 items-center w-full h-12
+    @apply flex flex-row justify-center px-2 items-center w-full h-8 text-sm font-semibold text-white
 }
 
 .auth-wrapper {
@@ -28,4 +28,8 @@
 
 .auth-subtitle {
     @apply text-2xl
+}
+
+.terms-and-conditions-text {
+    @apply text-sm text-gray-600
 }
