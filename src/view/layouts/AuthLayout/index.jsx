@@ -1,13 +1,22 @@
 import React from 'react'
 
+import { SVG } from 'view/elements'
+
 export function AuthLayout({ children }) {
     return (
         <>
-            <main className='flex flex-row'>
-                <div className='sm:w-0 md:w-0 lg:w-3/5 xl:w-3/5 h-screen'>
-                    
+            <main className='auth-wraper'>
+                <div className='image-container'>
+                    <img 
+                        src='https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png' 
+                        alt="Twitter," 
+                        className='auth-image'
+                    />
+                    <div className='logo-contaianer'>
+                        <SVG variant='twitter-logo' />
+                    </div>
                 </div>
-                <div className='bg-slate-100 sm:w-full md:w-full lg:w-2/5 xl:w-2/5 flex items-center justify-center h-screen'>
+                <div className='auth-container'>
                     { children }
                 </div>
             </main>

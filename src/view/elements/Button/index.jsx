@@ -1,16 +1,18 @@
 import React from 'react'
 import './button.css'
+
 export function Button({type, action, children, variant }) {
     const getClassName = variant => {
         const classes = {
-            'primary': '.primary',
-            'secondary': '.secondary',
-            'default' : '.default',
+            'primary': 'primary',
+            'secondary': 'secondary',
+            'default' : 'default',
+            'sign-in-google': 'sign-in-google',
+            'sign-in-apple': 'sign-in-apple',
         }
         return classes[variant] || classes['default']
     }
     const buttonClassName = getClassName(variant)
-    console.log(buttonClassName)
     return (
         <button 
             className={buttonClassName} 

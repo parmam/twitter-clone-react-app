@@ -1,0 +1,31 @@
+.logo-container {
+    @apply w-12 absolute top-11
+}
+
+.icon-container {
+    @apply relative w-6 h-6
+}
+
+.google-content {
+    @apply flex flex-row justify-center px-2 items-center gap-3 w-full h-12
+}
+
+.apple-content {
+    @apply flex flex-row justify-center px-2 items-center w-full h-12 gap-3
+}
+
+.phone-content {
+    @apply flex flex-row justify-center px-2 items-center w-full h-12 
+}
+
+.auth-wrapper {
+    @apply w-96 flex flex-col h-96 pl-8
+}
+
+.auth-title {
+    @apply text-6xl
+}
+
+.auth-subtitle {
+    @apply text-2xl
+}

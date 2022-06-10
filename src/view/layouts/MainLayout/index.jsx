@@ -5,7 +5,7 @@ export function MainLayout({ children }) {
   return (
     <>
       <Header />
-      <main className="bg-slate-600 w-full h-auto flex justify-center flex-col">
+      <main className="main-container">
         {children}
       </main>
       <Footer />

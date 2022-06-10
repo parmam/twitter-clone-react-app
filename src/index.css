@@ -1,6 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 @tailwind base;
+
+/* ELEMETS */
+@import 'view/elements/Button/button.css';
+@import 'view/elements/NavItem/navItem.css';
+@import 'view/elements/Avatar/avatar.css';
+@import 'view/elements/SVG/SVG.css';
+@import 'view/elements/Avatar/avatar.css';
+@import 'view/elements/Divider/divider.css';
+
+
+/* COMPONENTS */
+@import 'view/components/Header/header.css';
+@import 'view/components/Footer/footer.css';
+@import 'view/components/Form/form.css';
+
+
+/* PROTOTYPES */
+@import 'view/prototypes/Navbar/navbar.css';
+@import 'view/prototypes/AuthMain/authMain.css';
+
+/* LAYOUTS */
+@import 'view/layouts/AuthLayout/authLayout.css';
+@import 'view/layouts/MainLayout/mainLayout.css';
+
+/* PAGES */
+@import 'view/pages/HomePage/homePage.css';
+@import 'view/pages/AuthPage/authPage.css';
+@import 'view/pages/ErrorPage/errorPage.css';
+
 @tailwind components;
 @tailwind utilities;
 

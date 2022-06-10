@@ -7,20 +7,20 @@ import {
 
 import { 
   HomePage, 
-  LoginPage,
+  AuthPage,
   ErrorPage
 } from './view/pages';
 
 const routes = [
   {
     exact: true,
-    path: '/login',
-    element: <LoginPage />,
+    path: '/home',
+    element: <HomePage />,
   },
   {
     exact: false,
     path: '/',
-    element: <HomePage />,
+    element: <AuthPage />,
   },
   {
     exact: false,

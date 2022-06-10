@@ -1,11 +1,11 @@
 import React from 'react'
-import { LoginForm } from 'view/components'
 import { AuthLayout } from 'view/layouts'
+import { AuthMain } from 'view/prototypes'
 
-export function LoginPage() {
+export function AuthPage() {
     return (
         <AuthLayout>
-            <LoginForm />
+            <AuthMain />
         </AuthLayout>
     )
 }
