@@ -12,7 +12,7 @@ export function AuthPage() {
                     <SVG variant='twitter-logo' />
                 </div>
                 <h1 className='auth-title'>
-                    Lo que está pasando ahora
+                    Happening 
                 </h1>
                 <h3 className='auth-subtitle'>
                     Únete a Twitter hoy mismo.
