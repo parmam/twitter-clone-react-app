@@ -4,22 +4,64 @@
 
 
 .auth-container {
-    @apply bg-slate-100 sm:w-full md:w-full lg:w-2/5 xl:w-2/5 flex items-center justify-center h-screen;
+    @apply bg-white sm:w-full md:w-full lg:w-2/5 xl:w-2/5 flex items-center h-screen;
 }
 
-.image-container {
+.brand-container {
     @apply relative inline-block
 }
 
-.auth-image{
+.brand-image{
     @apply block min-w-full min-h-screen max-h-screen -z-10 inset-0 object-cover
 }
 
-.logo-contaianer {
+.brand-logo-contaianer {
     @apply absolute inset-0 w-2/3 h-full text-white flex m-auto
 }
 
-.auth-logo{
+.brand-logo{
     @apply sm:w-36 sm:h-36 max-w-md bg-transparent text-white relative m-auto top-1/2 -translate-y-1/2
-    md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-2/3 xl:h-auto
+    md:w-auto md:h-auto lg:w-auto lg:h-auto xl:w-2/3 xl:h-auto 
 }
+
+.logo-container {
+    @apply w-12 absolute top-24 text-blue-400
+}
+
+.icon-container {
+    @apply relative w-6 h-6
+}
+
+.google-content {
+    @apply flex flex-row justify-center px-2 items-center gap-3 w-full h-10 text-sm font-medium
+}
+
+.apple-content {
+    @apply flex flex-row justify-center px-2 items-center w-full h-10 gap-3 text-sm font-semibold
+}
+
+.text-content {
+    @apply flex flex-row justify-center px-2 items-center w-full h-10 text-sm font-semibold
+}
+
+.auth-wrapper {
+    @apply w-96 flex flex-col h-96 pl-8
+}
+
+.auth-title {
+    @apply text-6xl
+}
+
+.auth-subtitle {
+    @apply text-2xl
+}
+
+.terms-and-conditions-text {
+    @apply text-xs text-gray-600 
+    sm:w-64 md:w-72 lg:w-72 xl:w-72 
+}
+
+.have-account-text {
+    @apply text-lg font-semibold
+}
+

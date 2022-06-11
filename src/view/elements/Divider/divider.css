@@ -1,0 +1,16 @@
+.or-container {
+    @apply flex flex-row text-center justify-center items-center
+    sm:w-64 md:w-72 lg:w-72 xl:w-72
+} 
+
+.or-text{
+    @apply mx-2
+}
+
+.line {
+    @apply border border-opacity-30 border-gray-300  w-full
+}
+
+.default {
+    @apply border border-opacity-30 border-gray-400 w-full
+}

@@ -9,15 +9,19 @@ export function Divider({variant}) {
         }
         return types[variant] || types['default']
     }
+
     const dividerVariant = getDividerVariant(variant)
 
     return (
         (dividerVariant === 'or') 
         ? (
             <>
-                <div className='or'></div>
-                <span>or</span>
-                <div></div>
+                <div className='or-container'>
+                    <div className='line'></div>
+                       <span className='or-text'>or</span> 
+                    <div className='line'></div>
+                </div>
+
             </>
         )
         : (

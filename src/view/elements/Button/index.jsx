@@ -9,6 +9,7 @@ export function Button({type, action, children, variant }) {
             'default' : 'default',
             'sign-in-google': 'sign-in-google',
             'sign-in-apple': 'sign-in-apple',
+            'rounded-cc': 'rounded-cc',
         }
         return classes[variant] || classes['default']
     }

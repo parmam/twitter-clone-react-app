@@ -1,4 +1,4 @@
-.primary{
+.primary {
     @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
     my-2 rounded-full h-20 bg-sky-400
 }
@@ -18,4 +18,10 @@
 .sign-in-apple {
     @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
     text-center my-2 rounded-full h-20 bg-slate-50 inline-block
+}
+
+.rounded-cc {
+    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
+    text-center my-2 rounded-full h-20 bg-transparent 
+    border-x border-y border-black
 }
