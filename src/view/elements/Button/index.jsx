@@ -16,7 +16,7 @@ export function Button({type, action, children, variant }) {
     const buttonClassName = getClassName(variant)
     return (
         <button 
-            className={buttonClassName} 
+            className={`${buttonClassName} ${'default'}`} 
             onClick={action || null} 
             type={type || 'button'}
         >

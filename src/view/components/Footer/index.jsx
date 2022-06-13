@@ -1,9 +1,9 @@
 import React from 'react'
 
-export function Footer(){
+export function Footer({children}){
     return (
-        <footer className='bg-red'>
-            footer
+        <footer className='footer-container'>
+           {children}
         </footer>
     )
 }

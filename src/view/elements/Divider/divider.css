@@ -1,6 +1,7 @@
 .or-container {
     @apply flex flex-row text-center justify-center items-center
-    sm:w-64 md:w-72 lg:w-72 xl:w-72
+    xs:w-[270px] sm:w-[320] md:w-96 lg:w-96 xl:w-96 
+    xs:h-10 sm:h-10 h-12  
 } 
 
 .or-text{
@@ -8,7 +9,7 @@
 }
 
 .line {
-    @apply border border-opacity-30 border-gray-300  w-full
+    @apply border border-t-0 border-opacity-30 border-gray-300  w-full
 }
 
 .default {

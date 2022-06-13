@@ -1,27 +1,34 @@
 .primary {
-    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
-    my-2 rounded-full h-20 bg-sky-400
+    @apply my-2 rounded-full
+    bg-twitter-primary-light hover:bg-twitter-primary-light-shade
+
 }
 .secondary {
-    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72
-    text-center my-2 rounded-lg h-20 bg-pink-600
+    @apply text-center my-2 rounded-lg  bg-pink-600
 }
-.default {
-    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
-    text-center my-2 rounded-lg h-20 bg-red-600
-}
+
 .sign-in-google {
-    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
-    text-center my-2 rounded-full h-20 bg-slate-50 inline-block
+    @apply text-center my-2 rounded-full inline-block
+    border-y border-x border-twitter-light-gray 
+    hover:bg-blue-50 hover:border-blue-100
+
 }
 
 .sign-in-apple {
-    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
-    text-center my-2 rounded-full h-20 bg-slate-50 inline-block
+    @apply text-center my-2 rounded-full inline-block 
+    border-y border-x border-twitter-light-gray 
+    hover:bg-twitter-light-gray hover:border-gray-300
+    
 }
 
 .rounded-cc {
-    @apply sm:w-64 md:w-72 lg:w-72 xl:w-72 
-    text-center my-2 rounded-full h-20 bg-transparent 
-    border-x border-y border-black
+    @apply text-center my-2 rounded-full bg-transparent 
+    border-x border-y border-twitter-light-gray dark:border-white
+    hover:bg-cyan-50
+
+}
+
+.default {
+    @apply xs:w-[270px] sm:w-[320] md:w-96 lg:w-96 xl:w-96 
+    xs:h-10 sm:h-10 h-12  
 }

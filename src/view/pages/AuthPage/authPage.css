@@ -1,5 +1,9 @@
+.auth-container {
+    @apply w-full flex flex-col h-96 pl-8 justify-start pt-[150px]
+}
+
 .logo-container {
-    @apply w-12 absolute top-11
+    @apply w-12 absolute top-[10%]  text-twitter-primary-light
 }
 
 .icon-container {
@@ -7,29 +11,47 @@
 }
 
 .google-content {
-    @apply flex flex-row justify-center px-2 items-center gap-3 w-full h-8 text-sm font-medium
+    @apply flex flex-row justify-center px-2 items-center 
+    gap-3 w-full text-sm font-medium
 }
 
 .apple-content {
-    @apply flex flex-row justify-center px-2 items-center w-full h-8 gap-3 text-sm font-semibold
+    @apply flex flex-row justify-center px-2 
+    items-center w-full gap-3 text-sm font-semibold 
+
 }
 
-.phone-content {
-    @apply flex flex-row justify-center px-2 items-center w-full h-8 text-sm font-semibold text-white
+.text-content {
+    @apply px-2 w-full text-sm font-semibold 
+    flex flex-row justify-center items-center
 }
 
-.auth-wrapper {
-    @apply w-96 flex flex-col h-96 pl-8
-}
 
 .auth-title {
-    @apply text-6xl
+    @apply font-extrabold
+    max-w-fit my-10 
+    h-auto break-words
+    xs:text-3xl sm:text-3xl md:text-5xl md-2:text-5xl lg:text-5xl xl:text-5xl text-3xl
 }
 
 .auth-subtitle {
-    @apply text-2xl
+    @apply font-bold mt-10 mb-5
+    xs:text-xl sm:text-xl md:text-2xl md-2:text-2xl lg:text-2xl xl:text-2xl text-xl
+}
+
+.auth-options{
+    @apply  flex flex-col
 }
 
 .terms-and-conditions-text {
-    @apply text-sm text-gray-600
+    @apply text-xs text-gray-600 
+    xs:w-[270px] sm:w-[320] md:w-96 lg:w-96 xl:w-96 
+    xs:h-10 sm:h-10 h-12  
 }
+
+.have-account-text {
+    @apply text-lg font-semibold pt-12
+}
+
+
+

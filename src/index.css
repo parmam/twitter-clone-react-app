@@ -33,8 +33,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body, html {
   @apply bg-white m-0 p-0 w-full min-h-screen overflow-x-hidden
+}
+
+main {
+  @apply flex h-auto flex-col
 }
 
 @layer base {
@@ -42,5 +46,6 @@ body {
     font-family: 'Roboto', sans-serif;
   }
 }
+
 
 
